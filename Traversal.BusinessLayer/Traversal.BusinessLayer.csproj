@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Traversal.DataAccesLayer\Traversal.DataAccesLayer.csproj" />
+    <ProjectReference Include="..\Traversal.EntityLayer\Traversal.EntityLayer.csproj" />
+  </ItemGroup>
+
 </Project>
