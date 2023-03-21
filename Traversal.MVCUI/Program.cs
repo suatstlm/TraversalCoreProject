@@ -1,7 +1,14 @@
+using Traversal.BusinessLayer.Abstract;
+using Traversal.BusinessLayer.Concrete;
+using Traversal.DataAccesLayer.Abstract;
+using Traversal.DataAccesLayer.EntityFramework;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IDestinationService, DestinationManager>();
+builder.Services.AddScoped<IDestinationDal, EfDestinationDal>();
 
 var app = builder.Build();
 
